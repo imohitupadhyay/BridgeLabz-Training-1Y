@@ -1,0 +1,36 @@
+class Course {
+    int courseId;
+    String courseName;
+    double price;
+    static String platformName = "EduTech Platform"; [cite: 106, 113]
+
+    Course(int id, String name, double price) { [cite: 121]
+        this.courseId = id;
+        this.courseName = formatTitleCase(name); [cite: 115]
+        this.price = price;
+    }
+
+    private String formatTitleCase(String input) {
+        return input.substring(0, 1).toUpperCase() + input.substring(1).toLowerCase();
+    }
+
+    double getFinalPrice() { return price; } [cite: 107]
+}
+
+class RecordedCourse extends Course { [cite: 110]
+    RecordedCourse(int id, String name, double price) { super(id, name, price); }
+
+    @Override
+    double getFinalPrice() {
+        return price * 0.90; // 10% discount [cite: 111]
+    }
+}
+
+class LiveCourse extends Course { [cite: 112]
+    LiveCourse(int id, String name, double price) { super(id, name, price); }
+
+    @Override
+    double getFinalPrice() {
+        return price * 0.95; // 5% discount [cite: 112]
+    }
+}

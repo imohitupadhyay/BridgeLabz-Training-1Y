@@ -1,0 +1,27 @@
+class Contact {
+    String name;
+    String phoneNumber; [cite: 81]
+
+    Contact(String name, String phone) {
+        this.name = name;
+        this.phoneNumber = phone;
+    }
+
+    void display() { [cite: 82]
+        System.out.println("Name: " + name + ", Phone: " + phoneNumber);
+    }
+}
+
+class BusinessContact extends Contact { [cite: 83]
+    String companyName; [cite: 84]
+
+    BusinessContact(String name, String phone, String company) {
+        super(name, phone);
+        this.companyName = company;
+    }
+
+    @Override
+    void display() { [cite: 88]
+        System.out.println("Name: " + name.toUpperCase() + " | Company: " + companyName); [cite: 85, 87]
+    }
+}

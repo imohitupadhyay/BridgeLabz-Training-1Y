@@ -1,0 +1,27 @@
+class Employee {
+    int empId;
+    String name; [cite: 51]
+
+    Employee(int empId, String name) {
+        this.empId = empId;
+        this.name = name;
+    }
+
+    String generateEmail() { [cite: 52]
+        return name.toLowerCase() + "@company.com"; [cite: 53, 54, 59]
+    }
+}
+
+class Manager extends Employee { [cite: 55]
+    String department; [cite: 56]
+
+    Manager(int id, String name, String dept) {
+        super(id, name);
+        this.department = dept;
+    }
+
+    @Override
+    String generateEmail() { [cite: 57, 61]
+        return name.toLowerCase() + "." + department.toLowerCase() + "@company.com"; [cite: 60]
+    }
+}

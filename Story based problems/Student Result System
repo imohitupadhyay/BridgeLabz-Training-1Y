@@ -1,0 +1,23 @@
+class Student {
+    int rollNo;
+    String name;
+    double marks; [cite: 94]
+
+    Student(int rollNo, String name, double marks) {
+        this.rollNo = rollNo;
+        this.name = name;
+        this.marks = marks;
+    }
+
+    void calculateGrade() { /* Implementation for grade */ } [cite: 95]
+}
+
+class EngineeringStudent extends Student { [cite: 96]
+    String branch; [cite: 97]
+
+    EngineeringStudent(int roll, String name, double marks, String branch) {
+        super(roll, name, marks);
+        this.branch = branch;
+        this.name = name + " (" + branch + ")"; [cite: 98, 100]
+    }
+}

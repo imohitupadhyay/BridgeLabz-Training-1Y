@@ -1,0 +1,30 @@
+class Account {
+    int accountNumber;
+    double balance;
+    static String bankName = "Global Bank"; [cite: 39, 44]
+
+    Account(int accNo, double bal) {
+        this.accountNumber = accNo;
+        this.balance = bal;
+    }
+
+    double calculateInterest() { return 0; } [cite: 40]
+}
+
+class SavingsAccount extends Account { [cite: 42]
+    SavingsAccount(int accNo, double bal) { super(accNo, bal); }
+
+    @Override
+    double calculateInterest() { [cite: 45]
+        return balance * 0.04; // 4% interest [cite: 42]
+    }
+}
+
+class CurrentAccount extends Account { [cite: 43]
+    CurrentAccount(int accNo, double bal) { super(accNo, bal); }
+
+    @Override
+    double calculateInterest() { [cite: 45]
+        return balance * 0.02; // 2% interest [cite: 43]
+    }
+}
