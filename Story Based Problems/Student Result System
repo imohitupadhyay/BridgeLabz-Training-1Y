@@ -1,0 +1,48 @@
+class Student {
+
+    int rollNo;
+    String name;
+    int marks;
+
+    Student(int rollNo, String name, int marks) {
+        this.rollNo = rollNo;
+        this.name = name;
+        this.marks = marks;
+    }
+
+    String calculateGrade() {
+
+        if (marks >= 80)
+            return "A";
+        else if (marks >= 60)
+            return "B";
+        else if (marks >= 40)
+            return "C";
+        else
+            return "Fail";
+    }
+}
+
+class EngineeringStudent extends Student {
+
+    String branch;
+
+    EngineeringStudent(int rollNo, String name, int marks, String branch) {
+        super(rollNo, name, marks);
+        this.branch = branch;
+    }
+
+    String getFullName() {
+        return name + " - " + branch;
+    }
+}
+
+class StudentTest {
+    public static void main(String[] args) {
+
+        EngineeringStudent s = new EngineeringStudent(1, "Mohit", 85, "CSE");
+
+        System.out.println("Name: " + s.getFullName());
+        System.out.println("Grade: " + s.calculateGrade());
+    }
+}
