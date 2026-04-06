@@ -1,0 +1,1 @@
+import java.util.*; class AutoBoxingDemo{ public static void main(String[] args){ ArrayList<Integer> l=new ArrayList<>(); l.add(10); l.add(15); l.add(20); l.add(5); l.add(5); int sum=0; for(int i:l) sum+=i; System.out.println(sum);} }

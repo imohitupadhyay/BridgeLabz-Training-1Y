@@ -1,0 +1,1 @@
+import java.util.*; class CollectionWrapper{ public static void main(String[] args){ double[] p={10.5,20.0,35.75,5.5}; ArrayList<Double> l=new ArrayList<>(); for(double x:p) l.add(x); double max=Collections.max(l); double sum=0; for(double x:l) sum+=x; System.out.println(max); System.out.println(sum/l.size());} }
