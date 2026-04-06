@@ -1,0 +1,1 @@
+class WrapperToPrimitive{ public static void main(String[] args){ Double d=45.67; double a=d; int b=d.intValue(); System.out.println(a); System.out.println(b);} }
