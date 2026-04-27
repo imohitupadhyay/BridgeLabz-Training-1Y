@@ -1,1 +1,0 @@
-class ShoppingCart{ public static void main(String[] args){ String[] p={"250","499","abc","99"}; int sum=0; for(String s:p){ try{ sum+=Integer.parseInt(s);}catch(Exception e){} } System.out.println(sum);} }
