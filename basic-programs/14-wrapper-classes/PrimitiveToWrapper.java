@@ -1,1 +1,0 @@
-import java.util.*; class PrimitiveToWrapper{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); int a=sc.nextInt(); Integer obj=a; System.out.println(a); System.out.println(obj);} }
