@@ -1,7 +1,0 @@
-public void countAndSort(String text) {
-    Map<String, Integer> map = new TreeMap<>(); // TreeMap keeps keys sorted [cite: 256]
-    String[] words = text.toLowerCase().replaceAll("[^a-zA-Z ]", "").split("\\s+");
-    for (String w : words) {
-        map.put(w, map.getOrDefault(w, 0) + 1);
-    }
-}
